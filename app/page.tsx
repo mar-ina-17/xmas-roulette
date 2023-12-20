@@ -5,10 +5,12 @@ import { AnimatePresence } from 'framer-motion';
 import Snowfall from 'react-snowfall'
 
 export default function Home() {
-  const snowflake1 = document.createElement('img')
-  snowflake1.src = '/snow.png'
-  const images = [snowflake1]
-
+  let snowflake1, images;
+  if (typeof window !== "undefined") {
+    snowflake1 = document.createElement('img')
+    snowflake1.src = '/snow.png'
+    images = [snowflake1]
+  }
   return (
 
     <AnimatePresence>

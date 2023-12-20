@@ -9,6 +9,7 @@ import { useDeleteDocuments } from '@/app/hooks/delDoc';
 
 type RegisterStepsProps = {
     children: ReactNode;
+    onClose: () => void; // Add onClose to the type
 };
 
 const RegisterSteps: React.FC<RegisterStepsProps> = ({ children }) => {
@@ -27,7 +28,7 @@ const RegisterSteps: React.FC<RegisterStepsProps> = ({ children }) => {
 
     const router = useRouter();
 
-    const handleSelectChange = (id, name) => {
+    const handleSelectChange = (id: string, name: string) => {
         setName(name);
         setId(id);
     };
@@ -49,7 +50,7 @@ const RegisterSteps: React.FC<RegisterStepsProps> = ({ children }) => {
     return (
         <>
             <Box display="flex justify-between">
-                <Stepper index={activeStep} colorScheme='red' orientation="vertical" height="400px" spacing="0">
+                <Stepper index={activeStep} colorScheme='red' orientation="vertical" height="400px">
                     {steps.map((step) => (
                         <Step key={step.title}>
                             <StepIndicator>

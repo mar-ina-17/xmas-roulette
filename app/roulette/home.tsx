@@ -62,7 +62,7 @@ export default function HomeInit() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <RegisterSteps onClose={closeSteps}>
+                    <RegisterSteps onClose={closeSteps} children={undefined}>
                         {/* Content for RegisterPopup goes here */}
                     </RegisterSteps>
                 </motion.div>
