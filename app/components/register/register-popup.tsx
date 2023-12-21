@@ -9,7 +9,7 @@ import { useDeleteDocuments } from '@/app/hooks/delDoc';
 
 type RegisterStepsProps = {
     children: ReactNode;
-    onClose: () => void; // Add onClose to the type
+    onClose: () => void; 
 };
 
 const RegisterSteps: React.FC<RegisterStepsProps> = ({ children }) => {
